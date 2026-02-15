@@ -1,0 +1,185 @@
+{
+  "info": {
+    "_postman_id": "7f2d233c-8040-4bd1-a774-7f325b3483eb",
+    "name": "agendamento",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47853628"
+  },
+  "item": [
+    {
+      "name": "post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"servico\":\"assistencia\",\r\n    \"profissional\":\"tecnico\",\r\n    \"dataHoraAgendamento\":\"2026-02-03T15:10\",\r\n    \"cliente\":\"hiago\",\r\n    \"telefoneCliente\":\"11959559059\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/agendamentos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "agendamentos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/agendamentos?dia=2026-02-03",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "agendamentos"
+          ],
+          "query": [
+            {
+              "key": "dia",
+              "value": "2026-02-03",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "put",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"servico\":\"assistencia\",\r\n    \"profissional\":\"tecnico\",\r\n    \"dataHoraAgendamento\":\"2026-02-03T16:10\",\r\n    \"cliente\":\"hiago\",\r\n    \"telefoneCliente\":\"11959559059\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/agendamentos?cliente=hiago&dataHoraAgendamento=2026-02-03T15:10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "agendamentos"
+          ],
+          "query": [
+            {
+              "key": "cliente",
+              "value": "hiago"
+            },
+            {
+              "key": "dataHoraAgendamento",
+              "value": "2026-02-03T15:10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get Copy",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/agendamentos?dia=2026-02-03",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "agendamentos"
+          ],
+          "query": [
+            {
+              "key": "dia",
+              "value": "2026-02-03",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/agendamentos?cliente=hiago&dataHoraAgendamento=2026-02-03T16:10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "agendamentos"
+          ],
+          "query": [
+            {
+              "key": "cliente",
+              "value": "hiago"
+            },
+            {
+              "key": "dataHoraAgendamento",
+              "value": "2026-02-03T16:10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get no params",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/agendamentos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "agendamentos"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
